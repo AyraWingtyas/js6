@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body{
+            background-color: rgb(42, 157, 165);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">Pilih Gambar yang Disukai</h1>
+        <br>
+        <br>
+        <table style="border: solid 1px;">
+            <tr>
+                <td>
+                    <label for="hewan">Pilihlah Salah Satu Hewan</label><br>
+                    <select id="hewan" onchange="cetak_gambar()">
+                        <option value="kadal">Kadal</option>
+                        <option value="katak">Katak</option>
+                        <option value="kucing">Kucing</option>
+                        <option value="rubah">Rubah</option>
+                        <option value="ayam">Ayam</option>
+                        <option value="itik">Itik</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+        <div style="width: 100px; height: 100px; border-style: solid 1px;">
+            <img src="" id="gambar">
+        </div>
+    <script>
+        function cetak_gambar() {
+            const hewan = document.getElementById("hewan");
+            const gambar = document.getElementById("gambar");
+
+            if (hewan.value === "kadal"){
+                    gambar.src = "https://fokusbanyumas.id/wp-content/uploads/2021/01/255px-Kadal_Kebun_Mabouya_multifasciata-696x464.jpg"
+                    window.alert('Ini adalah kadal')
+                }
+    
+            if (hewan.value === "katak"){
+                    gambar.src = "https://stillwaterlogjam.com/wp-content/uploads/2018/11/katak-pohon.jpg"
+                    window.alert('Ini adalah katak')
+                }
+            
+            if (hewan.value === "kucing"){
+                    gambar.src = "https://yt3.ggpht.com/a/AATXAJzNB40Zkv2PV248nDyWCQsSiCIUN0Io_4L-1w=s900-c-k-c0xffffffff-no-rj-mo"
+                    window.alert('Ini adalah kucing')
+                }
+            
+            if (hewan.value === "rubah"){
+                    gambar.src = "https://1.bp.blogspot.com/-oDIgc4lHtcc/UbWnoGm0wzI/AAAAAAAADHU/M7kzGBzCgKw/w1200-h630-p-k-no-nu/Red-Fox-In-Snow.jpg"
+                    window.alert('Ini adalah rubah')
+                }
+            if (hewan.value === "ayam"){
+                    gambar.src = "https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2019/09/Ayam-peliharaan.jpg"
+                    window.alert('Ini adalah ayam')
+                }
+            if (hewan.value === "itik"){
+                    gambar.src = "https://th.bing.com/th/id/OIP.GbDZ_DDOkrvRUWyCCApokgHaEK?w=281&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                    window.alert('Ini adalah itik')
+                }
+        }
+    </script>
+</body>
+</html>

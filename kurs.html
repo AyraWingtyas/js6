@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang Asing ke Rupiah</title>
+</head>
+<body>
+    <div>
+        <h3>
+            ---------Konversi Mata Uang Asing ke Rupiah----------
+        </h3>
+    </div>
+    <div>
+        <fieldset style="display: flex;">
+            <table style="border: 1px solid; ">
+                <tr>    
+                    <td>
+                        <label for="">Masukkan Nilai</label><br>
+                        <input type="number" size="15" value="" id="jumlahUang">
+                    </td>
+                </tr>
+            </table>
+            <table style="border: solid 1px;">
+                <tr>
+                    <td>
+                        <label for="">Mata Uang</label><br>
+                        <select id="bank" onclick= konversi()>
+                            <option value="US_Dollar" id="US_Dollar">US Dollar</option>
+                            <option value="US_Singapore" id="US Singapore">US Singapore</option>
+                            <option value="Ringgit" id="Ringgit">Ringgit Malaysia</option>
+                            <option value="Yen" id="Yen">Yen jepang</option>
+                            <option value="Euro" id="Euro">Euro Rusia</option>
+                            <option value="Riyal" id="Riyal">Riyal Arab</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <table style="border: solid 1px;">
+                <tr>
+                    <td>
+                        <label for="" >Nilai Rupiah</label><br>
+                        <span type="number" id="hasilHitung">     
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    <script>
+        function konversi(){
+            const dollarAmerika = 9915;
+            const dollarSingapore = 13472;  
+            const ringgitMalay = 874;
+            const yenJapan = 120;
+            const euroRusia = 15888;
+            const riyalArab = 3592;
+
+            let jumlahUang = document.getElementById('jumlahUang');
+            let bank = document.getElementById('bank');
+            let hasilHitung = document.getElementById('hasilHitung');
+
+          if (bank.value ==='US_Dollar') {
+            console.log(jumlahUang.value * 9915)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 9915
+            }
+          else if (bank.value === 'US_Singapore') {
+            console.log(jumlahUang.value * 13472)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 13472
+          }
+          else if (bank.value === 'Ringgit') {
+            console.log(jumlahUang.value * 874)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 874
+          }
+          else if (bank.value === 'Yen') {
+            console.log(jumlahUang.value * 120)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 120
+          }
+          else if (bank.value === 'Euro') {
+            console.log(jumlahUang.value * 15888)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 15888
+          }
+          else if (bank.value === 'Riyal') {
+            console.log(jumlahUang.value * 3592)
+            hasilHitung.innerHTML = 'Rp. ' + jumlahUang.value * 3592
+          }
+        }
+    </script>
+</body>
+</html>

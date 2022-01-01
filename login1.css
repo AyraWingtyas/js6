@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(14, 117, 168);
+}
+
+#box {
+    width: 250px;
+    height: 300px;
+    background-color: skyblue;
+    border: solid 2px wheat;
+    margin: 5% auto;
+    text-align: center;
+    padding-top: 50px;
+}
